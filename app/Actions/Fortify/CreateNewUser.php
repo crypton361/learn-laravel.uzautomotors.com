@@ -45,6 +45,9 @@ class CreateNewUser implements CreatesNewUsers
             $user->update(['photo'=>$avatar]);
         }
 
+        $user->assignRole('user');
+
+
         return $user;
     }
 }
